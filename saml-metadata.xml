@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor
+	entityID="https://www.iam.sa/samlsso"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+	<md:IDPSSODescriptor
+		WantAuthnRequestsSigned="false"
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:KeyDescriptor use="signing">
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:X509Data>
+					<ds:X509Certificate>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvv4Bp7JAUMvKwV+8QLbP
+NVlJop2uGjvEooeA56DVqtqYOTrFigWYxvCUfl/wlDk2MyyFb++jFwRQzTunPshy
+S/zf7S8Kpp4EsmDgkEIcjgBYL7WyZ0n547X64Vkam3/4lvCYopSc8OpFu77wGhCi
+Up2heUitdpaowjbdwu8jPfJGxX0GjC+hXWl5jNjPlBWpYNgPQ6o/gvo0C1wpXF9Y
+2qw+2XQiRa0Z2PKqNEu/ypLlsW5y9eFum00zHFKRBYYUq9bliF3UDBnwqFeC319Y
+2BX2aiDgAPPcQ4drNQb7acg97VXcuHFWO5kLZy4dFbJw5XOZ4AZo1s2o1XsM95WS
+XwIDAQAB
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+			Location="https://www.iam.sa/samlsso" />
+		<md:SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="https://www.iam.sa/samlsso" />
+	</md:IDPSSODescriptor>
+</md:EntityDescriptor>
